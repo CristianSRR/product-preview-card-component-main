@@ -1,0 +1,164 @@
+:root {
+  --dark-cyan: #3c8067;
+  --cream: #f2ebe3;
+  --very-dark-blue: #1c232b;
+  --dark-grayish-blue: #6c7289;
+  --white: #ffffff;
+  --weights-montserrat-500: 500;
+  --weights-montserrat-700: 700;
+  --weights-fraunces-700: 700;
+  --font-family-Fraunces: "Fraunces", serif;
+  --font-family-Montserrat: "Montserrat", sans-serif;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cream);
+}
+
+.article {
+  max-width: 800px;
+  background: var(--white);
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+  margin: 0 1em;
+}
+
+.article__img-container,
+.article__info-product {
+  flex: 1;
+}
+
+.article__img-product {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article__info-product {
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article__info-preview,
+.article__info-paragraph,
+.article__info-price-before {
+  font-family: var(--font-family-Montserrat);
+  font-weight: var(--weights-montserrat-500);
+  color: var(--dark-grayish-blue);
+}
+
+.article__info-preview {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.article__info-title {
+  font-family: var(--font-family-Fraunces);
+  font-weight: var(--weights-fraunces-700);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.article__info-paragraph {
+  font-size: 1.1rem;
+}
+
+.artcile__info-price {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.article__info-price-now {
+  font-family: var(--font-family-Fraunces);
+  font-weight: var(--weights-fraunces-700);
+  font-size: 2.2rem;
+  color: var(--dark-cyan);
+}
+
+.article__info-price-before {
+  text-decoration: line-through;
+}
+
+.article__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: none;
+  border-radius: 0.5em;
+  padding: 1.2em 0;
+  background: var(--dark-cyan);
+  color: var(--white);
+  font-family: var(--font-family-Montserrat);
+  font-weight: var(--weights-montserrat-700);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .article__btn:hover {
+    background: var(--very-dark-blue);
+  }
+}
+
+@media not all and (hover: hover) {
+  .article__btn:focus {
+    background: var(--very-dark-blue);
+  }
+}
+
+@media screen and (width < 800px) {
+  .article {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .article__info-product {
+    padding: 1.5em;
+  }
+
+  .article__info-preview {
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+  }
+
+  .article__info-title {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+
+  .article__info-paragraph {
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+
+  .artcile__info-price {
+    margin-bottom: 1em;
+  }
+
+  .article__info-price-now {
+    font-size: 2rem;
+  }
+
+  .article__btn {
+    padding: 1.2em 0;
+    font-size: 1rem;
+  }
+}
